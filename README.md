@@ -22,35 +22,29 @@ argparse (included with Python)
 logging (included with Python)
 smtplib (included with Python)
 json (included with Python)
+
 Installation
 Clone or download this repository.
 
 Install dependencies using:
-
-bash
-Copy
-Edit
 pip install web3 colorama pyfiglet
+
 Usage
 Run the script:
-
-bash
-Copy
-Edit
 python event_subscriber.py
-Provide required inputs:
 
+Provide required inputs:
 Ethereum node URL (default: http://127.0.0.1:8545 for Ganache).
 Smart contract address.
 Path to the contract ABI file.
 Event name(s) to listen for.
 Polling interval (default: 10 seconds).
 (Optional) Enable transaction simulation:
-
 Choose y when prompted to simulate a transaction.
-(Optional) Enable email alerts:
 
+(Optional) Enable email alerts:
 Enter your email credentials if you want alerts for large withdrawals.
+
 Key Functions
 setup_logging()
 Initializes logging to record detected events.
@@ -77,16 +71,6 @@ simulate_transaction(web3, contract)
 Simulates a transaction for testing.
 
 Example Output
-rust
-Copy
-Edit
-  ______            _       _        _     
- |  ____|          (_)     | |      | |    
- | |__  __  _____  _  __ _| |_ __ _| |__  
- |  __| \ \/ / _ \| |/ _` | __/ _` | '_ \ 
- | |____ >  <  __/ | (_| | || (_| | |_) |
- |______/_/\_\___|_|\__,_|\__\__,_|_.__/ 
-                                         
 Enter connection URL for Ethereum node (default is Ganache http://127.0.0.1:8545):
 Enter contract address:
 Enter path to contract ABI file:
@@ -104,10 +88,12 @@ New Withdrawal event detected!
 Block Number: 12345
 Transaction Hash: 0xabc123...
 Arguments: {'amount': 5000000000000000000, 'to': '0xUserAddress'}
+
 Notes
 The script assumes an Ethereum node is running (e.g., Ganache for local testing).
 Ensure the contract ABI file is correctly formatted JSON.
 The large withdrawal threshold is set to 10 ETH by default but can be modified.
+
 License
 This project is licensed under the MIT License.
 
